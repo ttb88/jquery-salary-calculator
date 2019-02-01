@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jQuery.js"></script>
+    <script src="client.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Salary Calculator</h1>
+    </header>
+
+    <section>
+        <h2>Add Employee</h2>
+        <div id="input-list">
+            <input type="type" placeholder="First Name" id="first-name-input" />
+            <input type="type" placeholder="Last Name" id="last-name-input" />
+            <input type="number" placeholder="ID" id="id-input" />
+            <input type="type" placeholder="Title" id="title-input" />
+            <input type="number" placeholder="Annual Salary" id="salary-input" />
+        </div>
+        <div id="submit-btn">
+            <button>Submit</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Employees</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="t-body">
+                    <tr class="row">
+                        <td>Jen</td>
+                        <td>Barber</td>
+                        <td>4521</td>
+                        <td>Team Lead</td>
+                        <td>80,000</td>
+                        <td><button class="delete-btn">Delete</button></td>
+                    </tr>
+                    <tr class="row">
+                        <td>Maurice</td>
+                        <td>Moss</td>
+                        <td>8724</td>
+                        <td>Support Team</td>
+                        <td>58,000</td>
+                        <td><button class="delete-btn">Delete</button></td>
+                    </tr>
+                    <tr class="row">
+                        <td>Roy</td>
+                        <td>Smith</td>
+                        <td>9623</td>
+                        <td>Quality Assurance</td>
+                        <td>48,000</td>
+                        <td><button class="delete-btn">Delete</button></td>
+                    </tr>
+                    <tr class="row">
+                    </tr>
+                </tbody>
+            </table>
+
+            <div>Totaly Monthly <span id="total-monthly"></span></div>
+    </section>
+    
+</body>
+</html>
