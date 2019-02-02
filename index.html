@@ -8,67 +8,74 @@
 </head>
 <body>
     <header>
+        <div class="row">
         <h1>Salary Calculator</h1>
+        </div>
     </header>
 
     <section>
-        <h2>Add Employee</h2>
-        <div id="input-list">
-            <input type="type" placeholder="First Name" id="first-name-input" />
-            <input type="type" placeholder="Last Name" id="last-name-input" />
-            <input type="number" placeholder="ID" id="id-input" />
-            <input type="type" placeholder="Title" id="title-input" />
-            <input type="number" placeholder="Annual Salary" id="salary-input" />
+        <div class="row"><h2>Add Employee</h2></div>
+        <div class="row">
+            <div id="input-list">
+                <input type="type" placeholder="First Name" id="first-name-input" />
+                <input type="type" placeholder="Last Name" id="last-name-input" />
+                <input type="number" placeholder="ID" id="id-input" />
+                <input type="type" placeholder="Title" id="title-input" />
+                <input type="number" placeholder="Annual Salary" id="salary-input" />
+            </div>
         </div>
-        <div id="submit-btn">
-            <button>Submit</button>
-        </div>
+
+        <div class="row">
+            <button id="submit-btn">Submit</button>
+        </div>     
     </section>
 
     <section>
-        <h2>Employees</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Annual Salary</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="t-body">
-                    <tr class="row">
-                        <td>Jen</td>
-                        <td>Barber</td>
-                        <td>4521</td>
-                        <td>Team Lead</td>
-                        <td>80,000</td>
-                        <td><button class="delete-btn">Delete</button></td>
-                    </tr>
-                    <tr class="row">
-                        <td>Maurice</td>
-                        <td>Moss</td>
-                        <td>8724</td>
-                        <td>Support Team</td>
-                        <td>58,000</td>
-                        <td><button class="delete-btn">Delete</button></td>
-                    </tr>
-                    <tr class="row">
-                        <td>Roy</td>
-                        <td>Smith</td>
-                        <td>9623</td>
-                        <td>Quality Assurance</td>
-                        <td>48,000</td>
-                        <td><button class="delete-btn">Delete</button></td>
-                    </tr>
-                    <tr class="row">
-                    </tr>
-                </tbody>
-            </table>
+        <div class="row"><h2>Employees</h2></div>
+        <div class="row">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Annual Salary</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="t-body">
+                        <tr class="row">
+                            <td>Jen</td>
+                            <td>Barber</td>
+                            <td>4521</td>
+                            <td>Team Lead</td>
+                            <td>80,000</td>
+                            <td><button class="delete-btn">Delete</button></td>
+                        </tr>
+                        <tr class="row">
+                            <td>Maurice</td>
+                            <td>Moss</td>
+                            <td>8724</td>
+                            <td>Support Team</td>
+                            <td>58,000</td>
+                            <td><button class="delete-btn">Delete</button></td>
+                        </tr>
+                        <tr class="row">
+                            <td>Roy</td>
+                            <td>Smith</td>
+                            <td>9623</td>
+                            <td>Quality Assurance</td>
+                            <td>48,000</td>
+                            <td><button class="delete-btn">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <div>Totaly Monthly <span id="total-monthly"></span></div>
+            <div class="row">
+                <h2 id="total-monthly-text">Total Monthly: $<span id="total-monthly-number"></span></h2>
+            </div>
     </section>
     
 </body>

@@ -3,13 +3,74 @@
     padding: 0;
 }
 
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 20px 0;
+}
+
 header {
     height: 150px;
-    background-color: grey;
+    background-color: #bdbcbc;
     text-align: center;
 }
 
 h1 {
     padding-top: 50px;
     color: white;
+}
+
+h2 {
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+#input-list input {
+    width: 206px;
+    border: 1px solid #c7c6c6;
+    text-align: left;
+    padding: 8px;
+    font-size: 14px;
+
+}
+
+button {
+  border: 1px, solid;
+  color: black;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+#submit-btn {
+    float: right;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #c7c6c6;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#total-monthly-text {
+    float: right;
+    padding: 5px;
 }
