@@ -3,11 +3,11 @@ $(document).ready(onReady);
 function onReady() {
     console.log('jquery');
     $('#submit-btn').on('click', submitEmployee);
-    //$('#t-body').on('click', '.delete-btn', rowDelete);
-    $('#total-monthly-number').text(totalMonthlySalary);
+    $('#t-body').on('click', '.delete-btn', rowDelete);
+    $('#total-monthly-number').text(numberWithCommas(totalMonthlySalary));
 }
 
-let totalMonthlySalary = 0;
+let totalMonthlySalary = 15500;
 
 
 
@@ -33,13 +33,17 @@ function submitEmployee() {
     $('#total-monthly-number').text(numberWithCommas(Math.round(totalMonthlySalary)));  
 }
 
+function rowDelete() {
+    $(this).closest('tr').remove();
+}
+
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function checkMonthlyTotal(totalMonthlySalary) {
     if (totalMonthlySalary > 20000) {
-        $('#total-monthly-text').css('background-color', 'red');
+        $('#total-monthly-text').css('background-color', '#db00009f');
     }
 }
 
