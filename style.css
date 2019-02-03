@@ -21,6 +21,7 @@ header {
 h1 {
     padding-top: 50px;
     color: white;
+    font-size: 50px;
 }
 
 h2 {
@@ -73,5 +74,4 @@ tr:nth-child(even) {
 #total-monthly-text {
     float: right;
     padding: 5px;
-
 }
