@@ -8,9 +8,9 @@ function onReady() {
     console.log('Current Employees Array:', employees);
 }
 
-let totalMonthlySalary = 15500;
 
 
+// 'Employee' class contructor
 class Employee {
     constructor(firstName, lastName, id, title, annualSalary) {
         this.firstName = firstName;
@@ -29,6 +29,11 @@ let roy = new Employee('Roy', 'Barber', 9623, 'Team Lead', 80000);
 // 'employees' array
 let employees = [jen, maurice, roy];
 
+// Starting montly salary from existing employees
+let totalMonthlySalary = 15500;
+
+
+
 
 // upon "Submit" button click it appends input info into table row on DOM
 function submitEmployee() {
@@ -41,7 +46,7 @@ function submitEmployee() {
 
     //create new Employee object and push to 'employees' array
     employees.push(new Employee(firstName, lastName, id, title, annualSalary));
-    console.log(employees);
+    console.log('Current Employees Array:', employees);
 
     //append new table row on DOM
     $('#t-body').append(`
@@ -51,7 +56,7 @@ function submitEmployee() {
         <td  class="employee-id">${id}</td>
         <td>${title}</td>
         <td>${'$ ' + numberWithCommas(annualSalary)}</td>
-        <td><button class="delete-btn">Delete</button></td>
+        <td class="table-cell-btn"><button class="delete-btn">Delete</button></td>
     </tr >`);
 
     //calculate 'totalMonthlySalary'
@@ -68,6 +73,8 @@ function submitEmployee() {
 }
 
 
+
+
 // deletes row of button clicked and updates "Total Monthly:" on DOM
 function rowDelete() {
 
@@ -75,7 +82,7 @@ function rowDelete() {
     let deletedSalary = $(this).closest('td').prev().text().replace(/\D/g, '');
 
     let employeeID = $(this).closest('tr').find('.employee-id').text();
-    //console.log(employeeID);
+    console.log(employeeID);
     
     employeeMatch(employeeID);
     console.log('Current Employees Array:', employees);
@@ -94,10 +101,14 @@ function rowDelete() {
 }
 
 
+
+
 // adds commas to 'totalMontlySalary'
 function numberWithCommas(totalMonthlySalary) {
     return totalMonthlySalary.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+
 
 
 // checks 'totalMonthlySalary' to update background color on DOM
@@ -110,11 +121,14 @@ function checkMonthlyTotal(totalMonthlySalary) {
     }
 }
 
+
+
+
 // use 'employeeID' to find match and then delete from 'employees' array
 function employeeMatch(employeeID) {
     for (let i = 0; i < employees.length; i++) {   
         if (employeeID == employees[i].id) {
-            employees.pop(employees[i]);
+            employees.splice(i, 1);
         }  
     }
     return employees;
